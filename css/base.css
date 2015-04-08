@@ -25,8 +25,7 @@ text > span.uid {
 }
 
 .node rect {
-  stroke: #4DB6AC;
-  stroke-width: 1.5px;
+  stroke-width: 0;
 }
 
 .edgePath path {
