@@ -20,4 +20,4 @@ gain0.connect(context.destination);
 gain1.connect(context.destination);
 gain2.connect(context.destination);
 
-// gain2.disconnect(gain2);
+gain2.disconnect(gain2);
