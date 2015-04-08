@@ -1,4 +1,4 @@
-(function (d3, dagreD3, document) {
+(function (dagreD3, d3, document, window) {
 
   // Constants.
   var SVG_ID = '#circuitry-svg';
@@ -32,7 +32,7 @@
     var width = g.graph().width;
     var height = g.graph().height;
     svg.attr('width', width + 20);
-    svg.attr('height', height * 2);
+    svg.attr('height', height * 1.75);
 
     var centerX = (svg.attr('width') - width) / 2;
     var centerY = (svg.attr('height') - height) / 2;
@@ -72,4 +72,10 @@
   document.addEventListener('aw-connected', onConnected);
   document.addEventListener('aw-disconnected', onDisconnected);
 
-})(d3, dagreD3, document);
+  window.onload = function () {
+    var code = document.querySelector('#code');
+    var codeview = document.querySelector('#codeview');
+    codeview.innerHTML = '<pre>' + code.innerHTML + '</pre>';
+  };
+
+})(dagreD3, d3, document, window);
