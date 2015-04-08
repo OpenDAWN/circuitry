@@ -1,2 +1,3 @@
-# circuitry
-Web Audio API circuit visualizer
+# Circuitry
+
+Web Audio API circuit diagram visualizer.
